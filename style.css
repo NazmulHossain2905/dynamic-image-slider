@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/448/174/357/neon-4k-hd-best-for-desktop-wallpaper-preview.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  background-size: cover;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+/* .slide-container {
+  width: 70rem;
+  height: 40rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+} */
+
+/* beauty starts */
+.slide-container {
+  width: 70rem;
+  height: 40rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-container::before {
+  content: "";
+  position: absolute;
+  width: 106%;
+  height: 102.1%;
+  background-color: #fff;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  z-index: -1;
+}
+/* beauty ends */
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+button {
+  position: absolute;
+  /* height: 100%; */
+  background-color: rgba(0, 0, 0, 0.1);
+  padding-inline: 2rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  top: 2rem;
+  bottom: 2rem;
+  border-radius: 1rem;
+  transition: opacity 0.2s ease-out;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+button i {
+  color: #fff5;
+  font-size: 3rem;
+}
+
+.left-btn {
+  left: 0.5rem;
+}
+
+.right-btn {
+  right: 0.5rem;
+}
+
+/* dots style */
+.dots {
+  position: absolute;
+  padding-inline: 0.2rem;
+  height: 2rem;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #fff4;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+  /* Text style */
+  font-size: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.08rem;
+  font-weight: bold;
+  color: #121212;
+}
+
+.dot:hover {
+  background-color: #fff;
+  transform: scale(1.1);
+}
+
+.activeDot {
+  background-color: #fff;
+  transform: scale(1.1);
+}
